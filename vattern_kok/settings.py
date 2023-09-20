@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-rakdoslover-vatternkokf-tvkupoqs1ez.ws-eu104.gitpod.io/'
+    '8000-rakdoslover-vatternkokf-4r5u2tw7qxu.ws-eu104.gitpod.io'
 ]
 
 
