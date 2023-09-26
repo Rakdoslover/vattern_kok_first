@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
 
-def index(request):
-    return HttpResponse("Hallå hallå!")
+def products(request):
+    """ A view to return the products page """
+
+    return render(request, 'products/products.html')
