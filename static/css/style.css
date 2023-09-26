@@ -7,6 +7,7 @@ body {
     width: 100vw;
     height: calc(100vh - 164px);
     font-family: 'Roboto', sans-serif;
+    background-color: #eae7db;
 }
 
 /* Navbar elements */
@@ -14,4 +15,5 @@ body {
 #main-nav {
     display: flex;
     justify-content: center;
+    background-color: #eae7db;
 }
