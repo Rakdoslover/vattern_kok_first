@@ -8,3 +8,10 @@ body {
     height: calc(100vh - 164px);
     font-family: 'Roboto', sans-serif;
 }
+
+/* Navbar elements */
+
+#main-nav {
+    display: flex;
+    justify-content: center;
+}
