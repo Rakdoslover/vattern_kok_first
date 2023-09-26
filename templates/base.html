@@ -32,6 +32,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
     
     <title>Vätternkök {% block extra_title %}{% endblock %}</title>
@@ -40,13 +41,13 @@
 <body>
     <header class="container-fluid fixed-top">
         <div class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <div class="col col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h1>VÄTTERN KÖK</h1>
                 </a>
             </div>
-            <div class="row bg-white">
-                <nav class="col-12 navbar-expand-lg navbar-light w-100">
+            <div class="col col-lg-8">
+                <nav class="col-12 navbar-expand-lg navbar-light w-100" id="navbar-disappear" style="margin: 0px; padding: 0px;">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
