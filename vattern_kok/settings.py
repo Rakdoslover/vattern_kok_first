@@ -30,6 +30,7 @@ DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-rakdoslover-vatternkokf-qzkncq3yhyr.ws-eu105.gitpod.io',
+    'vattern-kok-first-0fb22bb65bd2.herokuapp.com',
 ]
 
 
