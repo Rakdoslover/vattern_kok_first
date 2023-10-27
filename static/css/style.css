@@ -7,7 +7,7 @@ body {
     width: 100vw;
     height: calc(100vh - 164px);
     font-family: 'Roboto', sans-serif;
-    background-color: #eae7db;
+    background-color: #bbb7AB;
     background-size: cover;
     z-index: 99999;
 }
@@ -77,6 +77,10 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+}
+
+.center-content {
+    justify-content: center;
 }
 
 /* links */
