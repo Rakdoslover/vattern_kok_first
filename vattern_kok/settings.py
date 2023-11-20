@@ -29,6 +29,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
+X_FRAME_ORIGINS = 'SAMEORIGIN'
+
 ALLOWED_HOSTS = [
     '8000-rakdoslover-vatternkokf-qzkncq3yhyr.ws-eu105.gitpod.io',
     'vattern-kok-first-0fb22bb65bd2.herokuapp.com',
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Apps
     'home',
     'products',
 
@@ -60,6 +63,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    '8000-rakdoslover-vatternkokf-qzkncq3yhyr.ws-eu105.gitpod.io',
+    'vattern-kok-first-0fb22bb65bd2.herokuapp.com',
 ]
 
 ROOT_URLCONF = 'vattern_kok.urls'
@@ -132,7 +140,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
