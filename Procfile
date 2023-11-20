@@ -1,1 +1,1 @@
-web:gunicorn vattern_kok.wsgi
+web: gunicorn vattern_kok.wsgi
