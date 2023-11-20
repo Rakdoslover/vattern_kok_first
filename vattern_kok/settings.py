@@ -15,6 +15,8 @@ import os
 from dotenv import load_dotenv
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
+if os.path.isfile('env.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,15 +26,15 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = 'DEBUG' in os.environ
 
 X_FRAME_ORIGINS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
-    '8000-rakdoslover-vatternkokf-qzkncq3yhyr.ws-eu105.gitpod.io',
+    '8000-rakdoslover-vatternkokf-9lsh5rt3cm1.ws-eu106.gitpod.io',
     'vattern-kok-first-0fb22bb65bd2.herokuapp.com',
 ]
 
