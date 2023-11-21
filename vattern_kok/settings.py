@@ -35,7 +35,7 @@ DEBUG = 'DEBUG' in os.environ
 X_FRAME_ORIGINS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
-    '8000-rakdoslover-vatternkokf-9lsh5rt3cm1.ws-eu106.gitpod.io',
+    '8000-rakdoslover-vatternkokf-6y2im07ozvz.ws-eu106.gitpod.io',
     'vattern-kok-first-0fb22bb65bd2.herokuapp.com',
 ]
 
