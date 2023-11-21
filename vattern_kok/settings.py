@@ -15,7 +15,6 @@ import os
 from dotenv import load_dotenv
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
-mimetypes.add_type("text/html", ".html", True)
 if os.path.isfile('env.py'):
     import env
 
