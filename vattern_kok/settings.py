@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-from dotenv import load_dotenv
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
 if os.path.isfile('env.py'):
