@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import dj_database_url
 from dotenv import load_dotenv
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
@@ -69,8 +70,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    '8000-rakdoslover-vatternkokf-qzkncq3yhyr.ws-eu105.gitpod.io',
-    'vattern-kok-first-0fb22bb65bd2.herokuapp.com',
+    'http://8000-rakdoslover-vatternkokf-qzkncq3yhyr.ws-eu105.gitpod.io',
+    'https://vattern-kok-first-0fb22bb65bd2.herokuapp.com',
 ]
 
 ROOT_URLCONF = 'vattern_kok.urls'
@@ -99,11 +100,15 @@ WSGI_APPLICATION = 'vattern_kok.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
